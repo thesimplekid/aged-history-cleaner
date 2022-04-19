@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+    "name": "Aged History Cleaner",
+    "version": "1.0",
+
+    "background": {
+      "scripts": ["background.js"]
+    },
+    
+    "description": "Deletes history older then set amount of days",
+    "permissions": [
+      "history",
+      "storage"
+    ],
+    "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+    },
+    "icons": {
+      "48": "icons/clock-history.svg",
+      "96": "icons/clock-history.svg@2x.png"
+    },
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "brendan@thesimplekid.com"
+      }
+    }
+}

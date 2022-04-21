@@ -1,6 +1,6 @@
 /node_modules/
 /public/build/
 
-/web-ext-artifacts
+/web-ext-artifacts/
 
 .DS_Store

@@ -12,14 +12,20 @@ function deleteHistory(){
           daysPassed = item.daysToExpire;
         }
 
-        const date = new Date();
+        const d = new Date();
+
+        const intHours = daysPassed * 24;
+
+        const msToSubtract = (intHours * 60) * 60 * 1000;
+
+        const startTime = d - msToSubtract;
+        const endTime = Date.now();
 
         browser.history.deleteRange({
-            startTime: date - daysPassed,
-            endTime: date
+            startTime: startTime,
+            endTime: endTime
         });
 
-        
     }
 
     let getting = browser.storage.sync.get("daysToExpire");
@@ -30,7 +36,7 @@ function deleteHistory(){
 
 const onStartUp = async () => {
     console.log("start up");
-    deleteHistory();
+    setTimeout(deleteHistory, 3000)
 };
 
 onStartUp();

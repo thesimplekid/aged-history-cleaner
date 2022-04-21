@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start:firefox": "web-ext run --source-dir .",
-    "build": "web-ext build"
+    "build": "web-ext build",
+    "lint": "web-ext lint"
   },
   "devDependencies": {
     "web-ext": "^6.8.0"

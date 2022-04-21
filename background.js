@@ -18,8 +18,9 @@ function deleteHistory(){
 
         const msToSubtract = (intHours * 60) * 60 * 1000;
 
-        const startTime = d - msToSubtract;
-        const endTime = Date.now();
+        const startTime = 0
+        const endTime = d - msToSubtract;
+        
 
         browser.history.deleteRange({
             startTime: startTime,
@@ -35,7 +36,6 @@ function deleteHistory(){
 
 
 const onStartUp = async () => {
-    console.log("start up");
     setTimeout(deleteHistory, 3000)
 };
 
